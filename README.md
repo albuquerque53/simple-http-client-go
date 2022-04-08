@@ -14,7 +14,7 @@ make up
 make app
 ```
 
-3. After finish (out of container), run:
+3. After finish, (out of container) run:
 ```
 make down
 ```
