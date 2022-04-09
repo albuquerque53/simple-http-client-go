@@ -12,7 +12,7 @@ func main() {
 	target := os.Args[2]
 
 	request := model.CreateRequest(httpMethod, target)
-	response := service.MakeRequest(request)
+	response := service.ExecuteRequest(request)
 
 	fmt.Println(response)
 }

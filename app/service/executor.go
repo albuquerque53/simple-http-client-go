@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func MakeRequest(simpleRequest *http.Request) string {
+func ExecuteRequest(simpleRequest *http.Request) string {
 	client := &http.Client{}
 
 	response, err := client.Do(simpleRequest)
