@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"simplehttpclient/app/service"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	response := service.MakeRequest("GET", "https://duck.com")
+
+	fmt.Println(response)
 }
