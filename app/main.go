@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"simplehttpclient/app/model"
 	"simplehttpclient/app/service"
 )
 
@@ -10,7 +11,8 @@ func main() {
 	httpMethod := os.Args[1]
 	target := os.Args[2]
 
-	response := service.MakeRequest(httpMethod, target)
+	request := model.CreateRequest(httpMethod, target)
+	response := service.MakeRequest(request)
 
 	fmt.Println(response)
 }
