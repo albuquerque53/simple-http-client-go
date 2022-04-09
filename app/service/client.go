@@ -6,16 +6,10 @@ import (
 	"net/http"
 )
 
-func MakeRequest(method, uri string) string {
+func MakeRequest(simpleRequest *http.Request) string {
 	client := &http.Client{}
 
-	request, err := http.NewRequest(method, uri, nil)
-
-	if err != nil {
-		log.Fatal("Error")
-	}
-
-	response, err := client.Do(request)
+	response, err := client.Do(simpleRequest)
 
 	if err != nil {
 		log.Fatal(err)
